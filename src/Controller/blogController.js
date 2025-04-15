@@ -4,7 +4,6 @@ exports.addBlog = async (request, response) => {
   try {
     const body = request.body;
     const img = request.imagePath;
-    console.log(img);
 
     const blogData = {
       blogTitle: body.blogTitle,

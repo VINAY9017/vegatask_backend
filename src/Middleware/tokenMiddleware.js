@@ -5,7 +5,7 @@ require("dotenv").config()
 exports.blogMiddleware = (request, response, next) => {
     try {
         const token = request.headers["authorization"].split(" ")[1];
-        const verified = jwt.verify(token, process.env.SECRET_KEY)
+        const verified = jwt.verify(token, process.env.SECRETKEY)
         if (verified) {
             request.id=verified.user_id,
             next()
